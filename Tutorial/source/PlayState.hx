@@ -35,6 +35,7 @@ class PlayState extends FlxState
     _mWalls.setTileProperties(2, FlxObject.NONE);
     _mWalls.setTileProperties(3, FlxObject.ANY);
     add(_mWalls);
+		add(_player);
 		super.create();
 	}
 
@@ -52,6 +53,7 @@ class PlayState extends FlxState
 
 	override public function update(elapsed:Float):Void
 	{
+		FlxG.collide(_player, _mWalls);
 		super.update(elapsed);
 	}
 }

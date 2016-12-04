@@ -14,9 +14,10 @@ class Player extends FlxSprite
   public function new(?X:Float=0, ?Y:Float=0, ?SimpleGraphic:FlxGraphicAsset)
   {
     super(X, Y, SimpleGraphic);
+    setSize(8, 14);
+    offset.set(4, 2);
     drag.x = drag.y = 1600;
-    makeGraphic(16, 16, FlxColor.BLUE);
-    //loadGraphic(AssetPaths.player__png, true, 16, 16);
+    loadGraphic(AssetPaths.player__png, true, 16, 16);
     setFacingFlip(FlxObject.LEFT, false, false);
     setFacingFlip(FlxObject.RIGHT, true, false);
     animation.add("lr", [3, 4, 3, 5], 6, false);

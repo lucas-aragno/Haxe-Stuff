@@ -36,6 +36,7 @@ class PlayState extends FlxState
     _mWalls.setTileProperties(3, FlxObject.ANY);
     add(_mWalls);
 		add(_player);
+		FlxG.camera.follow(_player, TOPDOWN, 1);
 		super.create();
 	}
 

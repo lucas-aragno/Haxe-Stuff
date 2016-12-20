@@ -1,11 +1,3 @@
-# Haxe-Stuff
-playing around w/ haxe
+# Haxe Stuff
 
-
-```slim
-p
-  input type = "submit" value = "Submit Input"
-    pre
-      code
-        | <input type="submit" value="Submit Input">
-```
+Making some basic HaxeFlixel game development

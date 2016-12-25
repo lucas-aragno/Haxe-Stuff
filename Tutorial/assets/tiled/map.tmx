@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16" nextobjectid="19">
- <tileset firstgid="1" name="tiles" tilewidth="16" tileheight="16" tilecount="3" columns="3">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16" nextobjectid="21">
+ <tileset firstgid="1" name="tiles" tilewidth="16" tileheight="16" tilecount="2" columns="3">
   <image source="tiles.png" width="48" height="16"/>
  </tileset>
  <objectgroup name="entities">
   <object id="18" name="Player" type="player" x="132" y="63"/>
+  <object id="19" name="Coin" type="coin" x="198" y="149"/>
+  <object id="20" name="Coin" type="coin" x="129" y="220"/>
  </objectgroup>
  <layer name="walls" width="20" height="20">
   <data encoding="csv">

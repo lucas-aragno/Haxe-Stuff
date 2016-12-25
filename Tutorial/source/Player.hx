@@ -26,10 +26,10 @@ class Player extends FlxSprite
   }
 
   override public function update(elapsed:Float):Void
-{
+  {
     movement();
     super.update(elapsed);
-}
+  }
 
   private function movement():Void
   {

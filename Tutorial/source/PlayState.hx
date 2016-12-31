@@ -53,13 +53,21 @@ class PlayState extends FlxState
 		   _player = new Player(x, y);
 		}  else if (type == "coin")
     {
-		  _grpCoins.add(new Coin(x + 4, y + 4));
+		  _grpCoins.add(new Coin(x - 4, y + 4));
     }
 	}
 
 	override public function update(elapsed:Float):Void
 	{
 		FlxG.collide(_player, _mWalls);
+		FlxG.overlap(_player, _grpCoins, playerTouchCoin);
 		super.update(elapsed);
+	}
+
+	private function playerTouchCoin(P:Player, C:Coin):Void
+	{
+		if (P.alive && P.exists && C.alive && C.exists) {
+			C.kill();
+		}
 	}
 }
